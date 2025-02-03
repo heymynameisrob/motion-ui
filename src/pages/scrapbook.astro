@@ -1,0 +1,58 @@
+---
+// React component imports
+import Layout from "../layouts/Layout.astro";
+import { DynamicIsland } from "@/components/examples/dynamic-island";
+import { Form } from "@/components/examples/form";
+import { MultiStep } from "@/components/examples/multi-step";
+import { TabsClipPath } from "@/components/examples/tabs";
+import { TrashAnimation } from "@/components/examples/trash-animation";
+import { Section } from "@/components/section";
+import { MultiStepPopover } from "@/components/examples/popover";
+import { Cursor } from "@/components/examples/cursor";
+import { MagicText } from "@/components/magic-text";
+---
+
+<Layout>
+  <main class="px-6 py-12 max-w-7xl mx-auto">
+    <div class="pointer-events-none fixed inset-0 flex z-0">
+      <div
+        class="absolute inset-0 h-full w-full bg-[radial-gradient(circle,hsla(0,0%,90%,.1)0%,hsla(0,0%,100%,0)100%)]"
+      >
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-8">
+      <h1 class="text-4xl font-medium text-primary lg:text-7xl">
+        <MagicText title="Scrapbook" client:only />
+      </h1>
+
+      <Section title="Form submit" client:only>
+        <Form client:only />
+      </Section>
+
+      <Section title="Multi-step" client:only>
+        <MultiStep client:visible />
+      </Section>
+
+      <Section title="Tabs" client:only>
+        <TabsClipPath client:visible />
+      </Section>
+
+      <Section title="Popover" client:only>
+        <MultiStepPopover client:visible />
+      </Section>
+
+      <Section title="Multiplayer cursor" client:only>
+        <Cursor client:visible />
+      </Section>
+
+      <Section title="Trash" client:only>
+        <TrashAnimation client:visible />
+      </Section>
+
+      <Section title="Dynamic Island" client:only>
+        <DynamicIsland client:visible />
+      </Section>
+    </div>
+  </main>
+</Layout>

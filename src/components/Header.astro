@@ -1,0 +1,30 @@
+---
+import Name from "@/components/Name.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<nav class="fixed top-0 w-full z-50 flex items-center justify-between p-4">
+  <Name />
+  <ul class="flex items-center justify-end gap-2">
+    <li>
+      <a
+        data-active={currentPath === "" ? "active" : undefined}
+        href="/"
+        class="inline-flex items-center px-2 h-10 text-sm font-medium bg-transparent border-b-2 border-transparent data-[active]:border-primary data-[active]:text-primary"
+      >
+        Guide
+      </a>
+    </li>
+    <li>
+      <a
+        data-active={currentPath === "scrapbook" ? "active" : undefined}
+        href="/scrapbook"
+        class="inline-flex items-center px-2 h-10 text-sm font-medium bg-transparent border-b-2 border-transparent data-[active]:border-primary data-[active]:text-primary"
+      >
+        Scrapbook
+      </a>
+    </li>
+  </ul>
+</nav>

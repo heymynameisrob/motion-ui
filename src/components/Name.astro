@@ -1,0 +1,24 @@
+---
+import { ScrambleText } from "@/components/scrambled-name";
+---
+
+<a
+  href="https://heymynameisrob.com"
+  target="_blank"
+  rel="noopener nofollow"
+  class="flex items-center gap-2"
+>
+  <span class="text-primary opacity-50 text-sm">by</span>
+  <div class="w-5 h-5 rounded-full bg-gray-3 overflow-hidden">
+    <img
+      src="https://ucarecdn.com/75709875-783d-47e9-a60a-6d43e1d5d344/-/preview/100x100/"
+      loading="lazy"
+      alt="Rob Hough"
+      class="object-fit w-full h-full"
+    />
+  </div>
+  <div class="flex items-center gap-1">
+    <ScrambleText client:load />
+    <div class="shrink-0 w-[3px] h-4 bg-secondary animate-blink"></div>
+  </div>
+</a>

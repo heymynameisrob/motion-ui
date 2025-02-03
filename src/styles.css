@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Berkley Mono", monospace;
+
+  --color-base-0: light-dark(oklch(100% 0.015 300), oklch(10% 0.02 300));
+  --color-base-1: light-dark(oklch(99% 0.015 300), oklch(12% 0.02 300));
+  --color-base-2: light-dark(oklch(98% 0.02 300), oklch(16% 0.025 300));
+  --color-base-3: light-dark(oklch(95% 0.04 300), oklch(18% 0.035 300));
+  --color-base-4: light-dark(oklch(92% 0.05 300), oklch(22% 0.04 300));
+  --color-base-5: light-dark(oklch(88% 0.06 300), oklch(26% 0.05 300));
+  --color-base-6: light-dark(oklch(84% 0.07 300), oklch(30% 0.06 300));
+  --color-base-7: light-dark(oklch(79% 0.08 300), oklch(36% 0.07 300));
+  --color-base-8: light-dark(oklch(73% 0.09 300), oklch(44% 0.08 300));
+  --color-base-9: light-dark(oklch(59% 0.15 300), oklch(52% 0.15 300));
+  --color-base-10: light-dark(oklch(56% 0.16 300), oklch(57% 0.18 300));
+  --color-base-11: light-dark(oklch(52% 0.17 300), oklch(78% 0.2 300));
+  --color-base-12: light-dark(oklch(10% 0.18 300), oklch(98% 0.08 300));
+
+  --animate-spinner: spinner 1.2s linear infinite;
+  --animate-blink: blink 1s step-end infinite;
+
+  --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  --text-sm: 0.9375rem;
+
+  @keyframes spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+@theme inline {
+  --color-background: var(--color-base-1);
+  --color-primary: var(--color-base-12);
+  --color-secondary: var(--color-base-11);
+  --color-muted: var(--color-base-8);
+  --color-accent: var(--color-mint-500);
+  --color-ring: var(--color-base-10);
+
+  --tw-prose-body: var(--color-gray-12);
+  --tw-prose-headings: var(--color-gray-12);
+  --tw-prose-lead: var(--color-gray-10);
+  --tw-prose-links: var(--color-cyan-500);
+  /* --tw-prose-bold: var(--color);
+  --tw-prose-counters: var(--tw-prose-invert-counters);
+  --tw-prose-bullets: var(--tw-prose-invert-bullets);
+  --tw-prose-hr: var(--tw-prose-invert-hr);
+  --tw-prose-quotes: var(--tw-prose-invert-quotes);
+  --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+  --tw-prose-captions: var(--tw-prose-invert-captions);
+  --tw-prose-kbd: var(--tw-prose-invert-kbd);
+  --tw-prose-kbd-shadows: var(--tw-prose-invert-kbd-shadows);
+  --tw-prose-code: var(--tw-prose-invert-code);
+  --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
+  --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+  --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+  --tw-prose-td-borders: var(--tw-prose-invert-td-borders); */
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    background: light-dark(var(--color-base-1), var(--color-base-0));
+  }
+
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    min-width: 0;
+  }
+
+  *,
+  ::before,
+  ::after {
+    border-color: light-dark(oklch(15% 0 0 / 0.1), oklch(93% 0 0 / 0.08));
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 3px !important;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  @font-face {
+    font-family: "Berkley Mono";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/BerkeleyMono-Regular.woff") format("woff");
+  }
+
+  strong {
+    @apply font-medium;
+  }
+
+  .focus {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}

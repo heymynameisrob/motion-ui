@@ -1,0 +1,12 @@
+---
+import { Icons } from "@/components/mdx/Icons";
+const props = Astro.props;
+---
+
+<h2
+  {...props}
+  class="flex flex-row items-center gap-2 text-secondary font-mono uppercase"
+>
+  <Icons id={props.id} client:load />
+  <slot />
+</h2>
