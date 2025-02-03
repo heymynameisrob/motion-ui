@@ -1,8 +1,11 @@
 ---
 import { Content, components } from "@/content/guidelines.mdx";
 import MarkdownLayout from "@/layouts/MarkdownLayout.astro";
+
+import Heading2 from "@/components/mdx/Heading2.astro";
+import ExternalLink from "@/components/mdx/ExternalLink.astro";
 ---
 
 <MarkdownLayout>
-  <Content />
+  <Content components={{ h2: Heading2, a: ExternalLink }} />
 </MarkdownLayout>
