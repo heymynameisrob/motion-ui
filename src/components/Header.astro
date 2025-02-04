@@ -1,5 +1,6 @@
 ---
 import Name from "@/components/Name.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
@@ -25,6 +26,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
       >
         Scrapbook
       </a>
+    </li>
+    <li>
+      <ThemeToggle />
     </li>
   </ul>
 </nav>

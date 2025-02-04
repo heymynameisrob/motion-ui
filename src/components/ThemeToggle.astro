@@ -1,0 +1,51 @@
+---
+import { SunIcon, MoonIcon } from "@heroicons/react/16/solid";
+import { Tooltip } from "@/primitives/tooltip";
+---
+
+<button
+  id="themeToggle"
+  aria-label="Toggle theme"
+  class="flex items-center justify-center w-9 h-9 rounded-md text-primary bg-transparent transition-all focus hover:bg-base-2"
+>
+  <SunIcon className="hidden w-4 h-4 opacity-70 dark:block" />
+  <MoonIcon className="visible w-4 h-4 opacity-70 dark:hidden" />
+</button>
+
+<script is:inline>
+  const setTheme = (() => {
+    const localStorageTheme = localStorage?.getItem("theme") ?? "";
+    console.log("Setting theme...");
+    if (["dark", "light"].includes(localStorageTheme)) {
+      localStorageTheme === "dark"
+        ? document.documentElement.classList.add("dark")
+        : document.documentElement.classList.remove("dark");
+      return localStorage.setItem("theme", localStorageTheme);
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
+      return localStorage.setItem("theme", "dark");
+    }
+    document.documentElement.classList.remove("dark");
+    return localStorage.setItem("theme", "light");
+  })();
+
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    const theme = document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
+
+    if (theme === "dark") {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
+  document
+    .getElementById("themeToggle")
+    ?.addEventListener("click", handleToggleClick);
+</script>

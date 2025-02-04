@@ -95,10 +95,16 @@
   --tw-prose-td-borders: var(--tw-prose-invert-td-borders); */
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
-    color-scheme: light dark;
+    color-scheme: light;
     background: light-dark(var(--color-base-1), var(--color-base-0));
+  }
+
+  .dark {
+    color-scheme: dark;
   }
 
   * {
