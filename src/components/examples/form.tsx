@@ -69,7 +69,6 @@ export function Form() {
                   placeholder="Enter your email"
                   {...field}
                   className="h-11"
-                  autoFocus
                   required
                 />
               </FormControl>

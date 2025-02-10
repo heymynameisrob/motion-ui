@@ -1,6 +1,7 @@
 @import "tailwindcss" source("../src");
 
 @plugin "@tailwindcss/typography";
+@plugin "@pyncz/tailwind-mask-image";
 
 @theme {
   --font-sans: "Inter", sans-serif;

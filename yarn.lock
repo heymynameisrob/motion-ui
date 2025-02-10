@@ -744,6 +744,11 @@
   resolved "https://registry.yarnpkg.com/@oslojs/encoding/-/encoding-1.1.0.tgz#55f3d9a597430a01f2a5ef63c6b42f769f9ce34e"
   integrity sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==
 
+"@pyncz/tailwind-mask-image@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@pyncz/tailwind-mask-image/-/tailwind-mask-image-2.0.0.tgz#59165001b8194caf8f2c6dfcb18248725c886720"
+  integrity sha512-BN52RPSp56VIA25ZpLD3SEigwADTrQ6a3Kq8x94rbhU6YP1HpvRjSYtnFenEfGw2nzESvFsNdYT6KKP+JuS73w==
+
 "@radix-ui/number@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@radix-ui/number/-/number-1.1.0.tgz#1e95610461a09cdf8bb05c152e76ca1278d5da46"

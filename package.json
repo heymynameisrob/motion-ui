@@ -15,6 +15,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.10.0",
+    "@pyncz/tailwind-mask-image": "^2.0.0",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.5",
     "@radix-ui/react-aspect-ratio": "^1.1.1",

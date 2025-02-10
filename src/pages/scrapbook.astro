@@ -9,6 +9,8 @@ import { TrashAnimation } from "@/components/examples/trash-animation";
 import { Section } from "@/components/section";
 import { MultiStepPopover } from "@/components/examples/popover";
 import { Cursor } from "@/components/examples/cursor";
+import { SearchLight } from "@/components/examples/searchlight";
+import { Calculator } from "@/components/examples/calculator";
 import { MagicText } from "@/components/magic-text";
 ---
 
@@ -22,12 +24,18 @@ import { MagicText } from "@/components/magic-text";
     </div>
 
     <div class="flex flex-col gap-8">
-      <h1 class="text-4xl font-medium text-primary lg:text-7xl">
+      <h1
+        class="text-[clamp(3rem,_5vw,_6.5rem)] mask-[linear-gradient(to_bottom_right,black_50%,transparent_100%)] font-semibold tracking-tighter text-primary text-center"
+      >
         <MagicText title="Scrapbook" client:only />
       </h1>
 
       <Section title="Form submit" client:only>
         <Form client:only />
+      </Section>
+
+      <Section title="Searchlight" client:only>
+        <SearchLight client:only />
       </Section>
 
       <Section title="Multi-step" client:only>
@@ -48,6 +56,10 @@ import { MagicText } from "@/components/magic-text";
 
       <Section title="Trash" client:only>
         <TrashAnimation client:visible />
+      </Section>
+
+      <Section title="Calculator" client:only>
+        <Calculator client:visible />
       </Section>
 
       <Section title="Dynamic Island" client:only>
