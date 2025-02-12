@@ -12,6 +12,8 @@ import { Cursor } from "@/components/examples/cursor";
 import { SearchLight } from "@/components/examples/searchlight";
 import { Calculator } from "@/components/examples/calculator";
 import { MagicText } from "@/components/magic-text";
+import { IconButton } from "@/components/examples/icon";
+import { Coin } from "@/components/examples/spinning-coin";
 ---
 
 <Layout>
@@ -32,6 +34,14 @@ import { MagicText } from "@/components/magic-text";
 
       <Section title="Form submit" client:only>
         <Form client:only />
+      </Section>
+
+      <Section title="Icon Button" client:only>
+        <IconButton client:visible />
+      </Section>
+
+      <Section title="Coin" client:only>
+        <Coin client:visible />
       </Section>
 
       <Section title="Searchlight" client:only>
