@@ -24,6 +24,7 @@
   --animate-spinner: spinner 1.2s linear infinite;
   --animate-blink: blink 1s step-end infinite;
   --animate-coin: coin 2s linear infinite;
+  --animate-shine: shine 3s linear infinite forwards;
 
   --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -71,6 +72,15 @@
   @keyframes coin {
     100% {
       transform: rotateY(1turn);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
     }
   }
 }
