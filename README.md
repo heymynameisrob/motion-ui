@@ -2,6 +2,8 @@
 
 This is a ever-growing list of details on how to use motion in (web) interfaces. It is a living document, updated based on my learnings. A lot of subjective and open to debate.
 
+NB The website for this isn't being maintained atm. You can see examples more examples on my own website: [https://heymynameisrob.com/work](https://heymynameisrob.com/work)
+
 Contributions are welcome. Edit [this file](https://github.com/heymynameisrob/motion-ui/blob/main/src/content/guidelines.mdx) and submit a pull request.
 
 ## Performance
